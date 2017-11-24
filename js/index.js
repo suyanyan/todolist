@@ -54,33 +54,20 @@ $(".close").click(function () {
         .hide()
         .prev()
         .css("filter","none");
+   
+});
+$(".close1").click(function () {
+    $(".showedit").val="";
+    $(".showedit")
+        .removeClass("show")
+        .parent()
+        .hide()
+        .prev()
+        .css("filter","none");
 });
 //    提交按钮
-$("#button").click(function () {
-    var text=$("#text").val();
-    $("#text").val("");
-    if(text===""){
-        return;
-    }
-    var time=new Date().getTime();
-    var data=getdata();
-    var color=getcolor();
-    data.push({con:text,time:time,isStar:0,isDown:0,color});
-    savedata(data);
-    rewrite();
-    $(".edit").removeClass("show").parent().hide().prev().css("filter","");
 
-});
-//删除信息
-$(".content").on("click",".del",function () {
-    var data=getdata();
-    var index=$(this).parent().attr("id");
-    data.reverse();    //数字的顺序颠倒
-    data.splice(index,1);
-    data.reverse();
-    savedata(data);
-    rewrite();
-});
+
 //移动
 $(".content").on("click",".finish",function () {
     var data=getdata();
@@ -103,6 +90,7 @@ $(".content").on("click","i",function () {
 });
 //查看信息
 $(".content").on("click","p",function (){
+	$(".close1").show(500);
     var text=$("p").html();
     $(".main")
         .css("filter","blur(2px)")
@@ -142,7 +130,7 @@ function rewrite() {
         if(state==="wait"){
             if(val.isDown===0){
                 var className=val.isStar?"active":"";
-                str+=" <li style='background:"+val.color+"' id='"+index+"'> <time> <span>"+getdate(val.time)+"</span> <span>"+gethour(val.time)+"</span></time><p>"+val.con+"</p><i class='"+className+"'>&#xe600;</i><div class='finish'>完成</div> </li>"
+                str+=" <li style='background:#8190de' id='"+index+"'> <time> <span>"+getdate(val.time)+"</span> <span>"+gethour(val.time)+"</span></time><p>"+val.con+"</p><i class='"+className+"'>&#xe600;</i><div class='finish'>完成</div> </li>"
             }
         }else if(state==="done"){
             if(val.isDown===1){

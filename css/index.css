@@ -4,16 +4,6 @@
     list-style: none;
     outline: none;
 }
-html{
-    font-size: 100px;
-    width: 100%;
-    height: 100%;
-}
-@media screen and (min-width: 375px){
-    html{
-        font-size: 50px;
-    }
-}
 
 body {
     height: 100%;
@@ -27,14 +17,14 @@ body {
 }
 .swiper-container {
     width: 100%;
-    height: 3rem;
+    height: 10rem;
 }
 .swiper-slide {
     text-align: center;
     font-size: 0.2rem;
     background: #fff;
     color: #fff;
-    height:3rem;
+    height:9rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -50,18 +40,18 @@ body {
 }
 .btn{
     width: 100%;
-    height:1rem;
+    height:4rem;
     display: flex;
     justify-content: space-around;
     margin: 0.2rem 0;
 }
 .btn div{
-    width:3rem;
-    height: 1rem;
+    width:9rem;
+    height: 2rem;
     border: 1px solid #333;
     border-radius: 0.2rem;
     text-align: center;
-    line-height: 1rem;
+    line-height: 2rem;
     font-size: .2rem;
 }
 .btn .wait.active{
@@ -94,17 +84,17 @@ i{
     font-family:iconfont ;
     font-size: 24px;
     position: absolute;
-    right: .4rem;
+    right: 1.4rem;
 }
 i.active{
     color: red;
 }
 .trash{
     font-family:iconfont;
-    font-size: 36px;
+    font-size:2.36rem;
     position: fixed;
-    bottom:80px;
-    right: 40px;
+    bottom:4.8rem;
+    right: 0.4rem;
     z-index: 999;
     display: none;
 }
@@ -114,38 +104,43 @@ i.active{
 }
 .content ul li{
     padding: 0 0.2rem;
-    width: 95%;
-    height: 1rem;
+    width: 100%;
+    height: 2.5rem;
     background: #c8d424;
-    line-height: 1rem;
+    line-height: 2.5rem;
     display: flex;
     color: #fff;
-    margin: 5px 0;
+    margin: 0.05rem 0;
     position: relative;
     justify-content:space-around;
 }
-
+.content ul li p{
+	width: 7rem;
+	word-break:keep-all;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
 .del{
     position: absolute;
-    width: 2.5rem;
+    width: 5.5rem;
     height: 100%;
     background: red;
     top:0;
-    right:-2.5rem;
+    right:-5.5rem;
     text-align: center;
-    line-height:1rem;
+    line-height:2.5rem;
     color: #fff;
     font-size: 0.22rem;
 }
 .finish{
     position: absolute;
-    width: 2.5rem;
+    width: 5.5rem;
     height: 100%;
     background: red;
     top:0;
-    right:-2.5rem;
+    right:-5.5rem;
     text-align: center;
-    line-height:1rem;
+    line-height:2.5rem;
     color: #fff;
     font-size: 0.22rem;
 }
@@ -160,8 +155,8 @@ i.active{
     display: none;
 }
 .mask .edit{
-    width: 5rem;
-    height:5rem;
+    width: 14rem;
+    height:14rem;
     position: absolute;
     border-radius: 20px;
     top: 0;
@@ -184,13 +179,15 @@ i.active{
     display: block !important;
   }
 #text{
-    padding:10%;
-    width: 80%;
-    height: 80%;
+    padding:.2rem;
+    width: 14rem;
+    height: 14rem;
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 20px;
+    right: 0;
+    bottom: 0;
+    border-radius:0.2rem;
 }
 #button{
     width: 75%;
@@ -201,15 +198,15 @@ i.active{
     line-height: 25%;
     text-align: center;
     border-radius:0.2rem;
-    bottom: 20px;
+    bottom: 0.2rem;
     left: 0;
     right: 0;
     margin: auto;
     border: none;
 }
 .showedit{
-    width: 5rem;
-    height: 5rem;
+    width: 20rem;
+    height: 22rem;
     background: #fff;
     border-radius:0.2rem;
     position: absolute;
@@ -226,44 +223,45 @@ i.active{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
-/*.close1{*/
-    /*display: block;*/
-    /*position: absolute;*/
-    /*z-index: 100;*/
-    /*color: red;*/
-    /*font-size: 36px;;*/
-    /*top:0rem;*/
-    /*right: 0rem;*/
-    /*font-weight: bold;*/
-/*}*/
+.mask .close1{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    color: red;
+    font-size: 36px;;
+    top:0rem;
+    right: 0rem;
+    font-weight: bold;
+    display: none;
+}
 
 .add{
     width: 100%;
-    height:1rem;
+    height:3rem;
     position: fixed;
     left: 0;
     bottom: 0;
     background: red;
-    font-size: 0.24rem;
+    font-size: 0.64rem;
     color: #fff;
     text-align: center;
-    line-height: 1rem;
+    line-height: 3rem;
 }
 .main{
     width: 100%;
     height: 100%;
 }
-#close{
+.close{
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 2.3rem;
+    height: 2.3rem;
     position: absolute;
-    top: 0;
+    top:0.48rem;
     right: 0;
     background: red;
     border-radius: 50%;
-    line-height: 30px;
+    line-height: 2.3rem;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size:1.58rem;
 }

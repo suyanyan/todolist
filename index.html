@@ -7,15 +7,16 @@
     <title>移动端应用1</title>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="js/rem.js" />
 </head>
 <body>
 <!-- Swiper -->
 <div class="main">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(img/01.jpg); background-size:420px 350px">Slide 1</div>
-            <div class="swiper-slide" style="background-image:url(img/02.jpg); background-size:420px 350px">Slide 2</div>
-            <div class="swiper-slide" style="background-image:url(img/03.jpg); background-size:420px 350px">Slide 3</div>
+            <div class="swiper-slide" style="background-image:url(img/01.jpg); background-size:100% 10rem">Slide 1</div>
+            <div class="swiper-slide" style="background-image:url(img/02.jpg); background-size:100% 10rem">Slide 2</div>
+            <div class="swiper-slide" style="background-image:url(img/03.jpg); background-size:100% 10rem">Slide 3</div>
         </div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
@@ -38,12 +39,9 @@
         <input type="button" id="button" value="提交">
         <span class="close">X</span>
     </div>
-        <div class="showedit">
+        <div class="showedit">   	
         </div>
-        <span class="close close1">X</span>
-
-
-
+        <span class="close1">X</span>
 </div>
 <i class="iconfont trash">&#xe699;</i>
 <!-- Swiper JS -->
@@ -51,9 +49,33 @@
 <script src="js/jquery.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/hammer.js"></script>
-<!--<script src="js/iscroll.js"></script>-->
 <script src="js/index.js"></script>
 <script>
+$("#button").click(function () {
+    var text=$("#text").val();
+    $("#text").val("");
+    if(text===""){
+        return;
+    }
+    var time=new Date().getTime();
+    var data=getdata();
+    var color=getcolor();
+    data.push({con:text,time:time,isStar:0,isDown:0,color});
+    savedata(data);
+    rewrite();
+    $(".edit").removeClass("show").parent().hide().prev().css("filter","");
+
+});
+//删除信息
+$(".content").on("click",".del",function () {
+    var data=getdata();
+    var index=$(this).parent().attr("id");
+    data.reverse();    //数字的顺序颠倒
+    data.splice(index,1);
+    data.reverse();
+    savedata(data);
+    rewrite();
+});
 
 </script>
 </html>
