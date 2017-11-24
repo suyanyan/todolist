@@ -17,14 +17,14 @@ body {
 }
 .swiper-container {
     width: 100%;
-    height: 10rem;
+    height: 1.5rem;
 }
 .swiper-slide {
     text-align: center;
     font-size: 0.2rem;
     background: #fff;
     color: #fff;
-    height:9rem;
+    height:2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -40,19 +40,19 @@ body {
 }
 .btn{
     width: 100%;
-    height:4rem;
+    height:.5rem;
     display: flex;
     justify-content: space-around;
     margin: 0.2rem 0;
 }
 .btn div{
-    width:9rem;
-    height: 2rem;
+    width:1.5rem;
+    height: .4rem;
     border: 1px solid #333;
     border-radius: 0.2rem;
     text-align: center;
-    line-height: 2rem;
-    font-size: .2rem;
+    line-height: .4rem;
+    font-size: .18rem;
 }
 .btn .wait.active{
     background: purple;
@@ -84,16 +84,16 @@ i{
     font-family:iconfont ;
     font-size: 24px;
     position: absolute;
-    right: 1.4rem;
+    right: .1rem;
 }
 i.active{
     color: red;
 }
 .trash{
     font-family:iconfont;
-    font-size:2.36rem;
+    font-size:0.36rem;
     position: fixed;
-    bottom:4.8rem;
+    bottom:0.8rem;
     right: 0.4rem;
     z-index: 999;
     display: none;
@@ -103,11 +103,11 @@ i.active{
     height:calc(100% - 5rem);
 }
 .content ul li{
-    padding: 0 0.2rem;
+    /*padding: 0 0.2rem;*/
     width: 100%;
-    height: 2.5rem;
+    height: .5rem;
     background: #c8d424;
-    line-height: 2.5rem;
+    line-height: .5rem;
     display: flex;
     color: #fff;
     margin: 0.05rem 0;
@@ -115,34 +115,23 @@ i.active{
     justify-content:space-around;
 }
 .content ul li p{
-	width: 7rem;
+	width: 1rem;
 	word-break:keep-all;
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
-.del{
+
+.finish,.del{
     position: absolute;
-    width: 5.5rem;
+    width:1.2rem;
     height: 100%;
     background: red;
     top:0;
-    right:-5.5rem;
+    right:-1.2rem;
     text-align: center;
-    line-height:2.5rem;
+    line-height:.5rem;
     color: #fff;
-    font-size: 0.22rem;
-}
-.finish{
-    position: absolute;
-    width: 5.5rem;
-    height: 100%;
-    background: red;
-    top:0;
-    right:-5.5rem;
-    text-align: center;
-    line-height:2.5rem;
-    color: #fff;
-    font-size: 0.22rem;
+    font-size: 0.18rem;
 }
 .mask{
     width: 100%;
@@ -155,10 +144,10 @@ i.active{
     display: none;
 }
 .mask .edit{
-    width: 14rem;
-    height:14rem;
+    width: 3rem;
+    height:2rem;
     position: absolute;
-    border-radius: 20px;
+    border-radius:.2rem;
     top: 0;
     left: 0;
     right: 0;
@@ -179,9 +168,9 @@ i.active{
     display: block !important;
   }
 #text{
-    padding:.2rem;
-    width: 14rem;
-    height: 14rem;
+	padding: .08rem;
+    width: 3rem;
+    height: 3rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -198,15 +187,15 @@ i.active{
     line-height: 25%;
     text-align: center;
     border-radius:0.2rem;
-    bottom: 0.2rem;
+    bottom: -0.8rem;
     left: 0;
     right: 0;
     margin: auto;
     border: none;
 }
 .showedit{
-    width: 20rem;
-    height: 22rem;
+    width: 3rem;
+    height: 3rem;
     background: #fff;
     border-radius:0.2rem;
     position: absolute;
@@ -237,15 +226,15 @@ i.active{
 
 .add{
     width: 100%;
-    height:3rem;
+    height:.6rem;
     position: fixed;
     left: 0;
     bottom: 0;
     background: red;
-    font-size: 0.64rem;
+    font-size: 0.24rem;
     color: #fff;
     text-align: center;
-    line-height: 3rem;
+    line-height: .6rem;
 }
 .main{
     width: 100%;
@@ -253,15 +242,15 @@ i.active{
 }
 .close{
     display: block;
-    width: 2.3rem;
-    height: 2.3rem;
+    width: .4rem;
+    height: .4rem;
     position: absolute;
-    top:0.48rem;
-    right: 0;
+    top:0.18rem;
+    right:0.18rem;
     background: red;
     border-radius: 50%;
-    line-height: 2.3rem;
+    line-height: .4rem;
     text-align: center;
     color: #fff;
-    font-size:1.58rem;
+    font-size:.18rem;
 }

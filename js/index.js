@@ -66,8 +66,31 @@ $(".close1").click(function () {
         .css("filter","none");
 });
 //    提交按钮
+$("#button").click(function () {
+    var text=$("#text").val();
+    $("#text").val("");
+    if(text===""){
+        return;
+    }
+    var time=new Date().getTime();
+    var data=getdata();
+    var color=getcolor();
+    data.push({con:text,time:time,isStar:0,isDown:0,color});
+    savedata(data);
+    rewrite();
+    $(".edit").removeClass("show").parent().hide().prev().css("filter","");
 
-
+});
+//删除信息
+$(".content").on("click",".del",function () {
+    var data=getdata();
+    var index=$(this).parent().attr("id");
+    data.reverse();    //数字的顺序颠倒
+    data.splice(index,1);
+    data.reverse();
+    savedata(data);
+    rewrite();
+});
 //移动
 $(".content").on("click",".finish",function () {
     var data=getdata();
